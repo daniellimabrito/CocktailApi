@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using CocktailApi.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace CocktailApi
 {
@@ -25,6 +27,15 @@ namespace CocktailApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
+            services.AddDbContext<CocktailContext>(x => 
+            {
+               // x.UseLazyLoadingProxies();
+                x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+               // x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
             services.AddControllers();
         }
 
@@ -36,9 +47,12 @@ namespace CocktailApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
 
             app.UseAuthorization();
 
