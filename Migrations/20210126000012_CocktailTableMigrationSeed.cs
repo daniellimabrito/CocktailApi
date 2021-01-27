@@ -2,7 +2,7 @@
 
 namespace CocktailApi.Migrations
 {
-    public partial class CocktailTableMigration : Migration
+    public partial class CocktailTableMigrationSeed : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

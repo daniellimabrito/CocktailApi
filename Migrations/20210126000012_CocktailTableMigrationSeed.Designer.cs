@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CocktailApi.Migrations
 {
     [DbContext(typeof(CocktailContext))]
-    [Migration("20210125230048_CocktailTableMigration")]
-    partial class CocktailTableMigration
+    [Migration("20210126000012_CocktailTableMigrationSeed")]
+    partial class CocktailTableMigrationSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
