@@ -1,0 +1,13 @@
+{
+  "ConnectionStrings" : {
+    "DefaultConnection1": "Server=xxxx;Database=xxxx;Uid=xxxx;Pwd=xxxx",
+    "DefaultConnection": "Data Source=cocktails.db"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  }
+}
