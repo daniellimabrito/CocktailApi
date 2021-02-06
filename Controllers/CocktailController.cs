@@ -8,7 +8,7 @@ using CocktailApi.Models;
 namespace CocktailApi.Controllers
 {
     [ApiController]
-    [Route("v1/[controller]")]
+    [Route("api/[controller]")]
     public class CocktailController : ControllerBase
     {
         private readonly CocktailContext _context;
@@ -20,16 +20,25 @@ namespace CocktailApi.Controllers
         [HttpGet("{id}", Name="GetCocktail")]
         public async Task<IActionResult> GetCocktail(int id)
         {
-            var obj = await _context.Cocktails.FindAsync(id);
-            return Ok(obj);
+            var objCocktail = await _context.Cocktails.FirstOrDefaultAsync( x => x.Id == id);
+           // return Ok(new Cocktail(){Id = 10, Title = "Test"});
+
+
+            if (objCocktail == null)
+                return NotFound();
+
+            return Ok(objCocktail);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Cocktail>> Get()
+        public async Task<IActionResult> GetCocktails()
         {
-            var users = await _context.Cocktails.ToListAsync();
+            var objCocktails = await _context.Cocktails.ToListAsync();
 
-            return users;
+            if (objCocktails == null)
+                return NotFound();
+
+            return Ok(objCocktails);
         }        
     }
 }
