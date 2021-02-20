@@ -17,6 +17,9 @@ namespace CocktailApi
     {
         public static void Main(string[] args)
         {
+            CreateHostBuilder(args).Build().Run();
+
+            /*
             var host = CreateHostBuilder(args).Build();
 
             using var scope = host.Services.CreateScope();
@@ -36,14 +39,16 @@ namespace CocktailApi
             }
             host.Run();
 
+            */
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                    .UseUrls("https://localhost:5001");
+                    webBuilder.UseStartup<Startup>();
+                    //.UseUrls("https://localhost:5001");
                 });
     }
 }

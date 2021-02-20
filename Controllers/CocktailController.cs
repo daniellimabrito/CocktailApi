@@ -20,7 +20,7 @@ namespace CocktailApi.Controllers
         [HttpGet("{id}", Name="GetCocktail")]
         public async Task<IActionResult> GetCocktail(int id)
         {
-            var objCocktail = await _context.Cocktails.FirstOrDefaultAsync( x => x.Id == id);
+            var objCocktail = await _context.Cocktail.FirstOrDefaultAsync( x => x.Id == id);
            // return Ok(new Cocktail(){Id = 10, Title = "Test"});
 
 
@@ -33,7 +33,7 @@ namespace CocktailApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCocktails()
         {
-            var objCocktails = await _context.Cocktails.ToListAsync();
+            var objCocktails = await _context.Cocktail.ToListAsync();
 
             if (objCocktails == null)
                 return NotFound();

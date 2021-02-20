@@ -32,8 +32,8 @@ namespace CocktailApi
             services.AddDbContext<CocktailContext>(x => 
             {
                // x.UseLazyLoadingProxies();
-                x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
-               // x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+               // x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
             });
 
             services.AddControllers();

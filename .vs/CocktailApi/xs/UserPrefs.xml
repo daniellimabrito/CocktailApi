@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{37CA18D1-ECE3-4433-A905-4327977414FE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+    <Files>
+      <File FileName="Controllers/CocktailController.cs" Line="36" Column="55" />
+      <File FileName="Startup.cs" Line="34" Column="45" />
+      <File FileName="Program.cs" Line="55" Column="1" />
+      <File FileName="Context/CocktailContext.cs" Line="19" Column="1" />
+      <File FileName="Models/Cocktail.cs" Line="3" Column="18" />
+      <File FileName="Data/Seed.cs" Line="15" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CocktailApi" expanded="True">
+            <Node name="CocktailApi" expanded="True" selected="True">
+              <Node name="Context" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CocktailApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/danielbrito/Projects/CocktailApi/Context/CocktailContext.cs" relfile="Context/CocktailContext.cs" line="18" column="1" />
+      <Breakpoint file="/Users/danielbrito/Projects/CocktailApi/Context/2y4ti8q6.rx8~" relfile="Context/2y4ti8q6.rx8~" line="27" column="1" />
+      <Breakpoint file="/Users/danielbrito/Projects/CocktailApi/Context/2y4ti8q6.rx8~" relfile="Context/2y4ti8q6.rx8~" line="23" column="1" />
+      <Breakpoint file="/Users/danielbrito/Projects/CocktailApi/Data/Seed.cs" relfile="Data/Seed.cs" line="14" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

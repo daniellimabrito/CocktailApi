@@ -11,7 +11,7 @@ namespace CocktailApi.Data
     {
         public static void SeedUsers(CocktailContext context)
         {
-            if (!context.Cocktails.Any())
+            if (!context.Cocktail.Any())
             {
                 var cocktailData = System.IO.File.ReadAllText("Data/CocktailSeedData.json");
                 var cocktails = JsonConvert.DeserializeObject<List<Cocktail>>(cocktailData);
