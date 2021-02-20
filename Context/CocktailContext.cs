@@ -5,7 +5,7 @@ namespace CocktailApi.Context
 {
     public class CocktailContext: DbContext
     {
-        public DbSet<Cocktail> Cocktails { get; set; }
+        public DbSet<Cocktail> Cocktail { get; set; }
         public CocktailContext(DbContextOptions<CocktailContext> options)
         :base(options)
         {
@@ -16,10 +16,10 @@ namespace CocktailApi.Context
         {
             modelBuilder.Entity<Cocktail>().Property(t => t.Id).IsRequired();
 
-            modelBuilder.Entity<Cocktail>().Property(t => t.Title).HasColumnType("varchar").HasMaxLength(100);
-            modelBuilder.Entity<Cocktail>().Property(t => t.Description).HasColumnType("varchar").HasMaxLength(400);
-            modelBuilder.Entity<Cocktail>().Property(t => t.Type).HasColumnType("varchar").HasMaxLength(50);
-            modelBuilder.Entity<Cocktail>().Property(t => t.ImageUrl).HasColumnType("varchar").HasMaxLength(250);
+            modelBuilder.Entity<Cocktail>().Property(t => t.Title).HasColumnType("varchar(100)").HasMaxLength(100);
+            modelBuilder.Entity<Cocktail>().Property(t => t.Description).HasColumnType("varchar(400)").HasMaxLength(400);
+            modelBuilder.Entity<Cocktail>().Property(t => t.Type).HasColumnType("varchar(50)").HasMaxLength(50);
+            modelBuilder.Entity<Cocktail>().Property(t => t.ImageUrl).HasColumnType("varchar(250)").HasMaxLength(250);
 
         }
     }
